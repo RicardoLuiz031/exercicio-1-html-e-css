@@ -1,0 +1,58 @@
+/* Torna o header um container Flex para alinhar imagem e info lado a lado */
+.topo {
+    display: flex;
+    align-items: flex-start; /* Alinha o texto no topo superior */
+    justify-content: space-between;  /*Empurra a imagem para a esquerda e o texto para a extrema DIREITA */
+    gap: 100px;               /* Espaçamento entre a imagem e as informações */
+}
+
+.topo img{
+    width: 720px;
+    height: 820px;
+    object-fit: cover;
+    border: 3px solid rgb(240, 235, 246);
+    flex-shrink: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /*alinha o texto e menu para direita */
+    text-align: right; /* direciona o texto para a direita */
+    padding-right: 1cm; /* ficara 1cm da borda lado direito */
+}
+
+.info h1 {
+    margin-top: 0; 
+    font-size: 42px;         /* Aumenta o tamanho do título */
+    letter-spacing: 1px;
+}
+
+.linha-divisoria {
+     border: none; /* remove a borda padrao */
+     border-top: 7px solid#555; /* define a espessura da cor da linha */
+     margin-top: 40px; /* distancia entre a linha e o texto */
+     width: 100%; /* Garante que ocupe de uma ponta à outra */
+}
+
+.MENU_OPCOES {
+   display: flex; 
+   flex-direction: column; /* forca os itens a ficarem na vertical */
+   gap: 150px; /*espaco entre cada linha */
+   padding: 10000;  /*remove o recuo padrao da ul */
+   margin: 70px 0; /*espacamento em cima e embaixo da lista */
+}
+
+/* Aumenta o tamanho das letras das opções da lista */
+.menu_opcoes li {
+    font-size: 24px;         /* Aumenta a fonte das opções */
+    font-weight: bold;       /* Deixa o texto em negrito */
+    text-decoration: none;  /* remove o sublinhado */
+    color: #000;  /* define a cor do texto */
+}
+
+/* efeito ao passar o mouse por cima */
+.MENU_OPCOES li a:hover {
+    color: #e50914; /*muda a cor para vermelho ao passa mouse */
+}
+
