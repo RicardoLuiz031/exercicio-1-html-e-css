@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pesquisa de satisfacao - MASTER FORCE</title>
+     <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- botao de retorno -->
+<div class="container-voltar">
+    <a href="index.html" class="link-voltar"></a>
+</div>
+
+<section class="secao-pesquisa">
+    <h2>pesquisa de satisfacao</h2>
+    <p class="descricao-secao">sua opiniao e fundamental para melhorarmos nosso atendimento. Os campos com <span class="obrigatorio">*</span> são obrigatórios.</p>
+    
+    <form action="#" method="post" class="form-satisfacao"></form>
+
+    <!-- 1. dados do cliente -->
+     <fieldset>
+        <legend>1. dados pessoais</legend>
+
+
+        <div class="campo">
+            <label for="nome">nome completo <span class="obrigatorio">*</span></label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div class="campo-grupo">
+            <label for="nome">digite seu email <span class="obrigatorio">*</span></label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com.br" required>
+        </div>
+
+        <div class="campo">
+            <label for="telefone">telefone de contato <span class="obrigatorio">*</span></label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+        </div>
+
+        <div class="campo-grupo">
+            <label for="idade">idade</label>
+            <input type="number" id="idade" name="idade" min="10" max="90">
+        </div>
+
+        <!-- 7. Data -->
+          <div class="campo">
+            <label for="data-uso">Data em que utilizou o serviço <span class="obrigatorio">*</span></label>
+            <input type="date" id="data-uso" name="data_uso" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <!--2. avaliacao de experiencia e recomendacao -->
+       <fieldset>
+        <legend>2. sua avaliacao</legend>
+
+        <div class="campo">
+            <label>como voce avalia sua experiencia? <span class="obrigatorio">*</span></label>
+            <div class="opcoes-radio">
+                <label><input type="radio" name="experiencia" value="muito-satisfeito" required> Muito satisfeito</label>
+                <label><input type="radio" name="experiencia" value="satisfeito"> Satisfeito</label>
+                <label><input type="radio" name="experiencia" value="normal"> normal</label>
+                <label><input type="radio" name="experiencia" value="insatisfeito"> insatisfeito</label>
+                <label><input type="radio" name="experiencia" value="pessimo"> pessimo</label>
+            </div>
+        </div>
+
+        <!--3. reconhecimento dos nossos servicos -->
+         <fieldset>
+            <legend>3. reconhecimento dos nossos clientes</legend>
+
+            <div class="campo-grupo">
+                <label for="origem">como conheceu nosso trabalho <span class="obrigatorio">*</span></label>
+                <select id="origem" name ="origem" required>
+                    <option value="" disabled selected>selecione uma opcao</option>
+                    <option value="instagram">instagram</option>
+                    <option value="facebook">facebook</option>
+                    <option value="google">google</option>
+                    <option value="indicacao">indicacao</option>
+                    <option value="youtube">youtube</option>
+                    <option value="outro">outro</option>
+                    </select>
+            </div>
+
+
+            <!--4. servico utilizado -->
+            <div class="campo">
+                <label for="servicos">qual servico voce utilizou? <span class="obrigatorio">*</span></label>
+                <select id="servico" name="servicos" required>
+                      <option value="" disabled selected>selecione uma opcao</option>
+                      <option value="musculacao">musculacao</option>
+                      <option value="zumba">zumba</option>
+                      <option value="crossfit">crossfit</option>
+                      <option value="dance">dance</option>
+                </select>
+            </div>
+        </div>
+         </fieldset>
+
+         <!-- recomendacao -->
+       <div class="campo">
+
+    <label>Você recomendaria nossa empresa para outras pessoas? <span class="obrigatorio">*</span></label>
+                    <div class="opcoes-radio em-linha">
+                        <label><input type="radio" name="recomendacao" value="sim" required> Sim</label>
+                        <label><input type="radio" name="recomendacao" value="talvez"> Talvez</label>
+                        <label><input type="radio" name="recomendacao" value="nao"> Não</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- 6. Comentários e Checkbox -->
+            <fieldset>
+                <legend>4. Considerações Finais</legend>
+
+                <div class="campo">
+                    <label for="comentarios">Conte-nos o que podemos melhorar:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escreva sua opinião aqui..."></textarea>
+                </div>
+
+                <!-- Desafio Extra: Checkbox de Novidades -->
+                <div class="campo-checkbox">
+                    <label>
+                        <input type="checkbox" name="receber_novidades" value="sim"> 
+                        Desejo receber novidades e promoções por e-mail.
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- 8. Botões -->
+            <div class="botoes-container">
+                <button type="submit" class="btn btn-enviar">Enviar avaliação</button>
+                <button type="reset" class="btn btn-limpar">Limpar formulário</button>
+            </div>
+
+        </form>
+    </section>
+
+</body>
+</html>

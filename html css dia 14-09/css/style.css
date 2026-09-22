@@ -1,0 +1,305 @@
+/* Torna o header um container Flex para alinhar imagem e info lado a lado */
+.topo {
+    display: flex;
+    align-items: flex-start; /* Alinha o texto no topo superior */
+    justify-content: space-between;  /*Empurra a imagem para a esquerda e o texto para a extrema DIREITA */
+    gap: 100px;               /* Espaçamento entre a imagem e as informações */
+}
+
+.topo img{
+    width: 720px;
+    height: 820px;
+    object-fit: cover;
+    border: 3px solid rgb(240, 235, 246);
+    flex-shrink: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /*alinha o texto e menu para direita */
+    text-align: right; /* direciona o texto para a direita */
+    padding-right: 1cm; /* ficara 1cm da borda lado direito */
+}
+
+.info h1 {
+    margin-top: 0; 
+    font-size: 42px;         /* Aumenta o tamanho do título */
+    letter-spacing: 1px;
+}
+
+.linha-divisoria {
+     border: none; /* remove a borda padrao */
+     border-top: 7px solid#555; /* define a espessura da cor da linha */
+     margin-top: 40px; /* distancia entre a linha e o texto */
+     width: 100%; /* Garante que ocupe de uma ponta à outra */
+}
+
+.MENU_OPCOES {
+   display: flex; 
+   flex-direction: column; /* forca os itens a ficarem na vertical */
+   gap: 150px; /*espaco entre cada linha */
+   padding: 10000;  /*remove o recuo padrao da ul */
+   margin: 70px 0; /*espacamento em cima e embaixo da lista */
+}
+
+/* Aumenta o tamanho das letras das opções da lista */
+.menu_opcoes li {
+    font-size: 24px;         /* Aumenta a fonte das opções */
+    font-weight: bold;       /* Deixa o texto em negrito */
+    text-decoration: none;  /* remove o sublinhado */
+    color: #000;  /* define a cor do texto */
+}
+
+/* efeito ao passar o mouse por cima */
+.MENU_OPCOES li a:hover {
+    color: #e50914; /*muda a cor para vermelho ao passa mouse */
+}
+
+/* ===================================================
+   BANNER / BOTÃO DE PESQUISA NAS PÁGINAS DE MODALIDADE
+   =================================================== */
+
+.banner-pesquisa {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-left: 5px solid #27ae60;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.banner-pesquisa h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.3em;
+}
+
+.banner-pesquisa p {
+  color: #666666;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+}
+
+.btn-ir-pesquisa {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #27ae60;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efeito Hover no botão */
+.btn-ir-pesquisa:hover {
+  background-color: #219150;
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   ESTILIZAÇÃO DO FORMULÁRIO DE SATISFAÇÃO
+   =================================================== */
+
+/* Container Principal da Seção */
+.secao-pesquisa {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+.secao-pesquisa h2 {
+    color: #27ae60;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.descricao-secao {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 25px;
+}
+
+.obrigatorio {
+    color: #e50914;
+    font-weight: bold;
+}
+
+/* Botão de Voltar */
+.container-voltar {
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+}
+
+.link-voltar {
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.link-voltar:hover {
+    color: #219150;
+}
+
+/* Agrupamento por Fieldset */
+fieldset {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+/* Estrutura dos Campos */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.campo-grupo {
+    display: flex;
+    gap: 20px;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* Estilização dos Inputs, Selects e Textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95em;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Desafio Extra: Estilo com :focus */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #27ae60;
+    box-shadow: 0 0 5px rgba(39, 174, 96, 0.4);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Opções em Radio e Checkbox */
+.opcoes-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.opcoes-radio.em-linha {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.opcoes-radio label,
+.estrelas label,
+.campo-checkbox label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.estrelas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.campo-checkbox {
+    margin-top: 10px;
+}
+
+/* 8. Botões e Efeitos Hover */
+.botoes-container {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-enviar {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.btn-enviar:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+}
+
+.btn-limpar {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.btn-limpar:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Desafio Extra: Adaptabilidade para telas menores (Responsivo) */
+@media (max-width: 600px) {
+    .campo-grupo {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .botoes-container {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
